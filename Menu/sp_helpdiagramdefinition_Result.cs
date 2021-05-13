@@ -10,22 +10,10 @@
 namespace Menu
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ClassMenu
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int ID { get; set; }
-        public int ClassId { get; set; }
-        public int IdDish { get; set; }
-        public System.DateTime Date { get; set; }
-        public Nullable<double> Gramm { get; set; }
-    
-        public virtual Class Class { get; set; }
-        public virtual Dish Dish { get; set; }
-
-        public override string ToString()
-        {
-            return Class.Num + " класс: " + Date.ToString("d");
-        }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

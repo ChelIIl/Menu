@@ -120,7 +120,20 @@
   <metadata name="class_toolstr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="class_toolstr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="class_toolstr.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="first_call_tlstr.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="first_call_tlstr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 10.8pt, style=Underline</value>
+  </data>
   <data name="first_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -135,6 +148,21 @@
         kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="first_call_tlstr.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="first_call_tlstr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="first_call_tlstr.Text" xml:space="preserve">
+    <value>1 - 4 классы</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="second_call_tlstr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 10.8pt, style=Underline</value>
   </data>
   <data name="second_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -151,6 +179,21 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="second_call_tlstr.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="second_call_tlstr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="second_call_tlstr.Text" xml:space="preserve">
+    <value>5 - 9 классы</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="third_call_tlstr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 10.8pt, style=Underline</value>
+  </data>
   <data name="third_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -166,127 +209,1586 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="four_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="third_call_tlstr.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
-  <data name="fifth_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="third_call_tlstr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 24</value>
   </data>
-  <data name="six_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="third_call_tlstr.Text" xml:space="preserve">
+    <value>10 - 11 классы</value>
   </data>
-  <data name="seventh_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="class_toolstr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 9</value>
   </data>
-  <data name="eighth_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="class_toolstr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 27</value>
   </data>
-  <data name="ninth_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="class_toolstr.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="tenth_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="class_toolstr.Text" xml:space="preserve">
+    <value>toolStrip1</value>
   </data>
-  <data name="eleventh_call_tlstr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
-</value>
+  <data name="&gt;&gt;class_toolstr.Name" xml:space="preserve">
+    <value>class_toolstr</value>
   </data>
+  <data name="&gt;&gt;class_toolstr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;class_toolstr.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;class_toolstr.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="earn_day_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="earn_day_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="earn_day_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 43</value>
+  </data>
+  <data name="earn_day_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="earn_day_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 15</value>
+  </data>
+  <data name="earn_day_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="earn_day_kal_lbl.Text" xml:space="preserve">
+    <value>Сколько набрано Ккал</value>
+  </data>
+  <data name="&gt;&gt;earn_day_kal_lbl.Name" xml:space="preserve">
+    <value>earn_day_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;earn_day_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;earn_day_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;earn_day_kal_lbl.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="gran.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gran.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
+  </data>
+  <data name="gran.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 43</value>
+  </data>
+  <data name="gran.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="gran.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 17</value>
+  </data>
+  <data name="gran.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gran.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;gran.Name" xml:space="preserve">
+    <value>gran</value>
+  </data>
+  <data name="&gt;&gt;gran.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gran.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gran.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="glob_day_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="glob_day_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="glob_day_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 43</value>
+  </data>
+  <data name="glob_day_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="glob_day_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 15</value>
+  </data>
+  <data name="glob_day_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="glob_day_kal_lbl.Text" xml:space="preserve">
+    <value>Норма Ккал в день</value>
+  </data>
+  <data name="&gt;&gt;glob_day_kal_lbl.Name" xml:space="preserve">
+    <value>glob_day_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;glob_day_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;glob_day_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;glob_day_kal_lbl.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="week_day_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="week_day_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="week_day_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 89</value>
+  </data>
+  <data name="week_day_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="week_day_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="week_day_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="week_day_lbl.Text" xml:space="preserve">
+    <value>Дата:</value>
+  </data>
+  <data name="&gt;&gt;week_day_lbl.Name" xml:space="preserve">
+    <value>week_day_lbl</value>
+  </data>
+  <data name="&gt;&gt;week_day_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;week_day_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;week_day_lbl.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="menu_date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="menu_date.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 84</value>
+  </data>
+  <data name="menu_date.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="menu_date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 21</value>
+  </data>
+  <data name="menu_date.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;menu_date.Name" xml:space="preserve">
+    <value>menu_date</value>
+  </data>
+  <data name="&gt;&gt;menu_date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menu_date.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menu_date.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="break_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="break_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
+  </data>
+  <data name="break_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 132</value>
+  </data>
+  <data name="break_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="break_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 18</value>
+  </data>
+  <data name="break_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="break_lbl.Text" xml:space="preserve">
+    <value>Завтрак</value>
+  </data>
+  <data name="&gt;&gt;break_lbl.Name" xml:space="preserve">
+    <value>break_lbl</value>
+  </data>
+  <data name="&gt;&gt;break_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;break_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;break_lbl.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="dinner_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dinner_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
+  </data>
+  <data name="dinner_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 132</value>
+  </data>
+  <data name="dinner_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="dinner_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 18</value>
+  </data>
+  <data name="dinner_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="dinner_lbl.Text" xml:space="preserve">
+    <value>Обед</value>
+  </data>
+  <data name="&gt;&gt;dinner_lbl.Name" xml:space="preserve">
+    <value>dinner_lbl</value>
+  </data>
+  <data name="&gt;&gt;dinner_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dinner_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dinner_lbl.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="aft_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="aft_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
+  </data>
+  <data name="aft_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>502, 132</value>
+  </data>
+  <data name="aft_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="aft_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
+  </data>
+  <data name="aft_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="aft_lbl.Text" xml:space="preserve">
+    <value>Полдник</value>
+  </data>
+  <data name="&gt;&gt;aft_lbl.Name" xml:space="preserve">
+    <value>aft_lbl</value>
+  </data>
+  <data name="&gt;&gt;aft_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aft_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;aft_lbl.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="rec_break_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rec_break_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="rec_break_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 156</value>
+  </data>
+  <data name="rec_break_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="rec_break_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="rec_break_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="rec_break_kal_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rec_break_kal_lbl.Name" xml:space="preserve">
+    <value>rec_break_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;rec_break_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rec_break_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rec_break_kal_lbl.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="gran2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gran2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
+  </data>
+  <data name="gran2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 158</value>
+  </data>
+  <data name="gran2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="gran2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 17</value>
+  </data>
+  <data name="gran2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gran2.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;gran2.Name" xml:space="preserve">
+    <value>gran2</value>
+  </data>
+  <data name="&gt;&gt;gran2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gran2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gran2.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="break_day_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="break_day_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="break_day_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 156</value>
+  </data>
+  <data name="break_day_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="break_day_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="break_day_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="break_day_kal_lbl.Text" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="&gt;&gt;break_day_kal_lbl.Name" xml:space="preserve">
+    <value>break_day_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;break_day_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;break_day_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;break_day_kal_lbl.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="rec_din_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rec_din_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="rec_din_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 156</value>
+  </data>
+  <data name="rec_din_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="rec_din_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="rec_din_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="rec_din_kal_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rec_din_kal_lbl.Name" xml:space="preserve">
+    <value>rec_din_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;rec_din_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rec_din_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rec_din_kal_lbl.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="gran3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gran3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
+  </data>
+  <data name="gran3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 156</value>
+  </data>
+  <data name="gran3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="gran3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 17</value>
+  </data>
+  <data name="gran3.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="gran3.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;gran3.Name" xml:space="preserve">
+    <value>gran3</value>
+  </data>
+  <data name="&gt;&gt;gran3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gran3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gran3.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="din_day_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="din_day_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="din_day_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 156</value>
+  </data>
+  <data name="din_day_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="din_day_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="din_day_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="din_day_kal_lbl.Text" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="&gt;&gt;din_day_kal_lbl.Name" xml:space="preserve">
+    <value>din_day_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;din_day_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;din_day_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;din_day_kal_lbl.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="rec_aft_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rec_aft_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="rec_aft_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>479, 158</value>
+  </data>
+  <data name="rec_aft_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="rec_aft_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="rec_aft_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="rec_aft_kal_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rec_aft_kal_lbl.Name" xml:space="preserve">
+    <value>rec_aft_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;rec_aft_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rec_aft_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rec_aft_kal_lbl.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="gran4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gran4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
+  </data>
+  <data name="gran4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 158</value>
+  </data>
+  <data name="gran4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="gran4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 17</value>
+  </data>
+  <data name="gran4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="gran4.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;gran4.Name" xml:space="preserve">
+    <value>gran4</value>
+  </data>
+  <data name="&gt;&gt;gran4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gran4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gran4.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="aft_day_kal_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="aft_day_kal_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="aft_day_kal_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>571, 156</value>
+  </data>
+  <data name="aft_day_kal_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="aft_day_kal_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="aft_day_kal_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="aft_day_kal_lbl.Text" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="&gt;&gt;aft_day_kal_lbl.Name" xml:space="preserve">
+    <value>aft_day_kal_lbl</value>
+  </data>
+  <data name="&gt;&gt;aft_day_kal_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aft_day_kal_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;aft_day_kal_lbl.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="break_dish_list.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="break_dish_list.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="break_dish_list.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 174</value>
+  </data>
+  <data name="break_dish_list.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="break_dish_list.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 259</value>
+  </data>
+  <data name="break_dish_list.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;break_dish_list.Name" xml:space="preserve">
+    <value>break_dish_list</value>
+  </data>
+  <data name="&gt;&gt;break_dish_list.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;break_dish_list.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;break_dish_list.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="din_dish_list.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="din_dish_list.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="din_dish_list.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 174</value>
+  </data>
+  <data name="din_dish_list.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="din_dish_list.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 259</value>
+  </data>
+  <data name="din_dish_list.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;din_dish_list.Name" xml:space="preserve">
+    <value>din_dish_list</value>
+  </data>
+  <data name="&gt;&gt;din_dish_list.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;din_dish_list.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;din_dish_list.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="aft_dish_list.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="aft_dish_list.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="aft_dish_list.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 176</value>
+  </data>
+  <data name="aft_dish_list.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="aft_dish_list.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 259</value>
+  </data>
+  <data name="aft_dish_list.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;aft_dish_list.Name" xml:space="preserve">
+    <value>aft_dish_list</value>
+  </data>
+  <data name="&gt;&gt;aft_dish_list.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aft_dish_list.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;aft_dish_list.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="add_break_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="add_break_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 438</value>
+  </data>
+  <data name="add_break_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="add_break_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 31</value>
+  </data>
+  <data name="add_break_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="add_break_dish_btn.Text" xml:space="preserve">
+    <value>Добавить в завтрак</value>
+  </data>
+  <data name="&gt;&gt;add_break_dish_btn.Name" xml:space="preserve">
+    <value>add_break_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;add_break_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add_break_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;add_break_dish_btn.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="del_break_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="del_break_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 473</value>
+  </data>
+  <data name="del_break_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="del_break_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 31</value>
+  </data>
+  <data name="del_break_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="del_break_dish_btn.Text" xml:space="preserve">
+    <value>Удалить блюдо</value>
+  </data>
+  <data name="&gt;&gt;del_break_dish_btn.Name" xml:space="preserve">
+    <value>del_break_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;del_break_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;del_break_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;del_break_dish_btn.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="add_din_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="add_din_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 438</value>
+  </data>
+  <data name="add_din_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="add_din_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 31</value>
+  </data>
+  <data name="add_din_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="add_din_dish_btn.Text" xml:space="preserve">
+    <value>Добавить в обед</value>
+  </data>
+  <data name="&gt;&gt;add_din_dish_btn.Name" xml:space="preserve">
+    <value>add_din_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;add_din_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add_din_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;add_din_dish_btn.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="del_din_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="del_din_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 473</value>
+  </data>
+  <data name="del_din_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="del_din_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 31</value>
+  </data>
+  <data name="del_din_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="del_din_dish_btn.Text" xml:space="preserve">
+    <value>Удалить блюдо</value>
+  </data>
+  <data name="&gt;&gt;del_din_dish_btn.Name" xml:space="preserve">
+    <value>del_din_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;del_din_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;del_din_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;del_din_dish_btn.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="add_aft_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="add_aft_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 440</value>
+  </data>
+  <data name="add_aft_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="add_aft_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 31</value>
+  </data>
+  <data name="add_aft_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="add_aft_dish_btn.Text" xml:space="preserve">
+    <value>Добавить в полдник</value>
+  </data>
+  <data name="&gt;&gt;add_aft_dish_btn.Name" xml:space="preserve">
+    <value>add_aft_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;add_aft_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add_aft_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;add_aft_dish_btn.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="del_aft_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="del_aft_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 474</value>
+  </data>
+  <data name="del_aft_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="del_aft_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 31</value>
+  </data>
+  <data name="del_aft_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="del_aft_dish_btn.Text" xml:space="preserve">
+    <value>Удалить блюдо</value>
+  </data>
+  <data name="&gt;&gt;del_aft_dish_btn.Name" xml:space="preserve">
+    <value>del_aft_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;del_aft_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;del_aft_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;del_aft_dish_btn.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="choose_comp_menu_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="choose_comp_menu_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 508</value>
+  </data>
+  <data name="choose_comp_menu_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="choose_comp_menu_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 53</value>
+  </data>
+  <data name="choose_comp_menu_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="choose_comp_menu_btn.Text" xml:space="preserve">
+    <value>Выбрать уже существующее меню</value>
+  </data>
+  <data name="&gt;&gt;choose_comp_menu_btn.Name" xml:space="preserve">
+    <value>choose_comp_menu_btn</value>
+  </data>
+  <data name="&gt;&gt;choose_comp_menu_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;choose_comp_menu_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;choose_comp_menu_btn.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="save_all_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="save_all_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 508</value>
+  </data>
+  <data name="save_all_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="save_all_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 53</value>
+  </data>
+  <data name="save_all_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="save_all_btn.Text" xml:space="preserve">
+    <value>Сохранить всё</value>
+  </data>
+  <data name="&gt;&gt;save_all_btn.Name" xml:space="preserve">
+    <value>save_all_btn</value>
+  </data>
+  <data name="&gt;&gt;save_all_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;save_all_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;save_all_btn.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="all_dish_list.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="all_dish_list.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="all_dish_list.Location" type="System.Drawing.Point, System.Drawing">
+    <value>655, 115</value>
+  </data>
+  <data name="all_dish_list.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="all_dish_list.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 327</value>
+  </data>
+  <data name="all_dish_list.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;all_dish_list.Name" xml:space="preserve">
+    <value>all_dish_list</value>
+  </data>
+  <data name="&gt;&gt;all_dish_list.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;all_dish_list.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;all_dish_list.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="search_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="search_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="search_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 39</value>
+  </data>
+  <data name="search_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="search_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 15</value>
+  </data>
+  <data name="search_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="search_lbl.Text" xml:space="preserve">
+    <value>Поиск по:</value>
+  </data>
+  <data name="&gt;&gt;search_lbl.Name" xml:space="preserve">
+    <value>search_lbl</value>
+  </data>
+  <data name="&gt;&gt;search_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;search_lbl.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="choose_search_par_combox.Items" xml:space="preserve">
+    <value>Ккал</value>
+  </data>
+  <data name="choose_search_par_combox.Items1" xml:space="preserve">
+    <value>Названию</value>
+  </data>
+  <data name="choose_search_par_combox.Items2" xml:space="preserve">
+    <value>Времени приёма</value>
+  </data>
+  <data name="choose_search_par_combox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 34</value>
+  </data>
+  <data name="choose_search_par_combox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="choose_search_par_combox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 21</value>
+  </data>
+  <data name="choose_search_par_combox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;choose_search_par_combox.Name" xml:space="preserve">
+    <value>choose_search_par_combox</value>
+  </data>
+  <data name="&gt;&gt;choose_search_par_combox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;choose_search_par_combox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;choose_search_par_combox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="search_txt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>655, 58</value>
+  </data>
+  <data name="search_txt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="search_txt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 20</value>
+  </data>
+  <data name="search_txt.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;search_txt.Name" xml:space="preserve">
+    <value>search_txt</value>
+  </data>
+  <data name="&gt;&gt;search_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search_txt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;search_txt.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="refresh_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="refresh_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>655, 80</value>
+  </data>
+  <data name="refresh_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="refresh_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 31</value>
+  </data>
+  <data name="refresh_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="refresh_btn.Text" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="&gt;&gt;refresh_btn.Name" xml:space="preserve">
+    <value>refresh_btn</value>
+  </data>
+  <data name="&gt;&gt;refresh_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refresh_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;refresh_btn.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="search_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="search_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 80</value>
+  </data>
+  <data name="search_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="search_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 31</value>
+  </data>
+  <data name="search_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="search_btn.Text" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="&gt;&gt;search_btn.Name" xml:space="preserve">
+    <value>search_btn</value>
+  </data>
+  <data name="&gt;&gt;search_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;search_btn.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="add_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="add_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>655, 447</value>
+  </data>
+  <data name="add_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="add_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 53</value>
+  </data>
+  <data name="add_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="add_dish_btn.Text" xml:space="preserve">
+    <value>Добавить блюдо в меню</value>
+  </data>
+  <data name="&gt;&gt;add_dish_btn.Name" xml:space="preserve">
+    <value>add_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;add_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;add_dish_btn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="del_dish_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="del_dish_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 447</value>
+  </data>
+  <data name="del_dish_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="del_dish_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 53</value>
+  </data>
+  <data name="del_dish_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="del_dish_btn.Text" xml:space="preserve">
+    <value>Удалить блюдо из меню</value>
+  </data>
+  <data name="&gt;&gt;del_dish_btn.Name" xml:space="preserve">
+    <value>del_dish_btn</value>
+  </data>
+  <data name="&gt;&gt;del_dish_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;del_dish_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;del_dish_btn.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="proteins_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="proteins_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="proteins_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>418, 46</value>
+  </data>
+  <data name="proteins_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="proteins_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 15</value>
+  </data>
+  <data name="proteins_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="proteins_lbl.Text" xml:space="preserve">
+    <value>Б</value>
+  </data>
+  <data name="&gt;&gt;proteins_lbl.Name" xml:space="preserve">
+    <value>proteins_lbl</value>
+  </data>
+  <data name="&gt;&gt;proteins_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proteins_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;proteins_lbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="fats_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fats_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="fats_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 45</value>
+  </data>
+  <data name="fats_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="fats_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="fats_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="fats_lbl.Text" xml:space="preserve">
+    <value>Ж</value>
+  </data>
+  <data name="&gt;&gt;fats_lbl.Name" xml:space="preserve">
+    <value>fats_lbl</value>
+  </data>
+  <data name="&gt;&gt;fats_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fats_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fats_lbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="carbohydrates_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="carbohydrates_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="carbohydrates_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 46</value>
+  </data>
+  <data name="carbohydrates_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="carbohydrates_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 15</value>
+  </data>
+  <data name="carbohydrates_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="carbohydrates_lbl.Text" xml:space="preserve">
+    <value>У</value>
+  </data>
+  <data name="&gt;&gt;carbohydrates_lbl.Name" xml:space="preserve">
+    <value>carbohydrates_lbl</value>
+  </data>
+  <data name="&gt;&gt;carbohydrates_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;carbohydrates_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;carbohydrates_lbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="norm_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="norm_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 74</value>
+  </data>
+  <data name="norm_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="norm_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="norm_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="norm_lbl.Text" xml:space="preserve">
+    <value>Норма:</value>
+  </data>
+  <data name="&gt;&gt;norm_lbl.Name" xml:space="preserve">
+    <value>norm_lbl</value>
+  </data>
+  <data name="&gt;&gt;norm_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;norm_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;norm_lbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="typed_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="typed_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 105</value>
+  </data>
+  <data name="typed_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="typed_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="typed_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="typed_lbl.Text" xml:space="preserve">
+    <value>Набрано:</value>
+  </data>
+  <data name="&gt;&gt;typed_lbl.Name" xml:space="preserve">
+    <value>typed_lbl</value>
+  </data>
+  <data name="&gt;&gt;typed_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typed_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;typed_lbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="norm_proteins_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="norm_proteins_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 74</value>
+  </data>
+  <data name="norm_proteins_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="norm_proteins_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="norm_proteins_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="norm_proteins_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;norm_proteins_lbl.Name" xml:space="preserve">
+    <value>norm_proteins_lbl</value>
+  </data>
+  <data name="&gt;&gt;norm_proteins_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;norm_proteins_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;norm_proteins_lbl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="norm_fats_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="norm_fats_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 74</value>
+  </data>
+  <data name="norm_fats_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="norm_fats_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="norm_fats_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="norm_fats_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;norm_fats_lbl.Name" xml:space="preserve">
+    <value>norm_fats_lbl</value>
+  </data>
+  <data name="&gt;&gt;norm_fats_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;norm_fats_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;norm_fats_lbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="norm_carbohydrates_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="norm_carbohydrates_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 74</value>
+  </data>
+  <data name="norm_carbohydrates_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="norm_carbohydrates_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="norm_carbohydrates_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="norm_carbohydrates_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;norm_carbohydrates_lbl.Name" xml:space="preserve">
+    <value>norm_carbohydrates_lbl</value>
+  </data>
+  <data name="&gt;&gt;norm_carbohydrates_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;norm_carbohydrates_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;norm_carbohydrates_lbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="typed_proteins_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="typed_proteins_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 105</value>
+  </data>
+  <data name="typed_proteins_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="typed_proteins_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="typed_proteins_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="typed_proteins_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;typed_proteins_lbl.Name" xml:space="preserve">
+    <value>typed_proteins_lbl</value>
+  </data>
+  <data name="&gt;&gt;typed_proteins_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typed_proteins_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;typed_proteins_lbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="typed_fats_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="typed_fats_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 105</value>
+  </data>
+  <data name="typed_fats_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="typed_fats_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="typed_fats_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="typed_fats_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;typed_fats_lbl.Name" xml:space="preserve">
+    <value>typed_fats_lbl</value>
+  </data>
+  <data name="&gt;&gt;typed_fats_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typed_fats_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;typed_fats_lbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="typed_carbohydrates_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="typed_carbohydrates_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 105</value>
+  </data>
+  <data name="typed_carbohydrates_lbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="typed_carbohydrates_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="typed_carbohydrates_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="typed_carbohydrates_lbl.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;typed_carbohydrates_lbl.Name" xml:space="preserve">
+    <value>typed_carbohydrates_lbl</value>
+  </data>
+  <data name="&gt;&gt;typed_carbohydrates_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typed_carbohydrates_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;typed_carbohydrates_lbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="excel_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="excel_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 507</value>
+  </data>
+  <data name="excel_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="excel_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 53</value>
+  </data>
+  <data name="excel_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="excel_btn.Text" xml:space="preserve">
+    <value>Вывести в excel</value>
+  </data>
+  <data name="&gt;&gt;excel_btn.Name" xml:space="preserve">
+    <value>excel_btn</value>
+  </data>
+  <data name="&gt;&gt;excel_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;excel_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;excel_btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>42</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>964, 571</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Главная форма</value>
+  </data>
+  <data name="&gt;&gt;first_call_tlstr.Name" xml:space="preserve">
+    <value>first_call_tlstr</value>
+  </data>
+  <data name="&gt;&gt;first_call_tlstr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;second_call_tlstr.Name" xml:space="preserve">
+    <value>second_call_tlstr</value>
+  </data>
+  <data name="&gt;&gt;second_call_tlstr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;third_call_tlstr.Name" xml:space="preserve">
+    <value>third_call_tlstr</value>
+  </data>
+  <data name="&gt;&gt;third_call_tlstr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

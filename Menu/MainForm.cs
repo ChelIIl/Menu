@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Menu
 {
     public partial class MainForm : Form
     {
-
+        List<DishGram> dg = new List<DishGram>();
         double break_norm = 0;
         double din_norm = 0;
         double aft_norm = 0;
@@ -15,6 +16,7 @@ namespace Menu
         double fat = 0;
         double prot = 0;
         double sum;
+        double num;
 
         public MainForm()
         {
@@ -24,11 +26,22 @@ namespace Menu
             rec_break_kal_lbl.Text = break_norm.ToString();
             rec_aft_kal_lbl.Text = aft_norm.ToString();
 
-            //break_day_kal_lbl.Text = "450"; // было
-            //din_day_kal_lbl.Text = "750";
-            //aft_day_kal_lbl.Text = "300";
+            break_day_kal_lbl.Text = "0";
+            din_day_kal_lbl.Text = "0";
+            aft_day_kal_lbl.Text = "0";
 
-            break_day_kal_lbl.Text = "0"; // стало
+            this.Fill();
+        }
+
+        public MainForm(double n)
+        {
+            InitializeComponent();
+
+            rec_din_kal_lbl.Text = din_norm.ToString();
+            rec_break_kal_lbl.Text = break_norm.ToString();
+            rec_aft_kal_lbl.Text = aft_norm.ToString();
+
+            break_day_kal_lbl.Text = "0";
             din_day_kal_lbl.Text = "0";
             aft_day_kal_lbl.Text = "0";
 
@@ -37,7 +50,8 @@ namespace Menu
 
         private void add_dish_btn_Click(object sender, EventArgs e)
         {
-            AddDishForm ad = new AddDishForm();
+            Dish obj = (Dish)all_dish_list.SelectedItem;
+            AddDishForm ad = new AddDishForm(obj);
             ad.ShowDialog();
 
             this.Fill();
@@ -73,7 +87,6 @@ namespace Menu
         public void Search()
         {
             List<Dish> li = DBConnection.Entities.Dishes.ToList();
-            //List<ClassMenu> l2 = new List<ClassMenu>();
             List<Dish> l = new List<Dish>();
 
             if (choose_search_par_combox.Text == "Ккал")
@@ -153,66 +166,54 @@ namespace Menu
             }
         }
 
-        //private void add_break_dish_btn_Click(object sender, EventArgs e) // было
-        //{
-        //    Dish obj = (Dish)all_dish_list.SelectedItem;
-
-        //    if (obj == null) { MessageBox.Show("Выберите блюдо из списка!"); }
-        //    else
-        //    {
-        //        break_norm += obj.Calories;
-
-        //        if (Convert.ToDouble(break_day_kal_lbl.Text) < break_norm)
-        //        {
-        //            break_norm -= obj.Calories;
-
-        //            MessageBox.Show("Вы превысили норму ккал!!!");
-        //        }
-
-        //        else
-        //        {
-        //            break_dish_list.Items.Add((Dish)all_dish_list.SelectedItem);
-
-        //            rec_break_kal_lbl.Text = break_norm.ToString();
-        //        }
-        //    }
-        //}
-
-        private void add_break_dish_btn_Click(object sender, EventArgs e) // стало
+        private void add_break_dish_btn_Click(object sender, EventArgs e)
         {
             Dish obj = (Dish)all_dish_list.SelectedItem;
-
             if (obj == null) { MessageBox.Show("Выберите блюдо из списка!"); }
+            else if (obj.MealTime.ToLower() != "завтрак") { MessageBox.Show("Это блюдо нельзя добавить в завтрак!"); }
             else
-            {
-                car += obj.Carbohydrates;
-                fat += obj.Fats;
-                prot += obj.Protein;
-                break_norm += obj.Calories;
-                sum += obj.Calories;
-
-                if (Convert.ToDouble(break_day_kal_lbl.Text) < break_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+            { 
+                DishGram dishGram = new DishGram();
+                using (var f = new GramForm(obj))
                 {
-                    car -= obj.Carbohydrates;
-                    fat -= obj.Fats;
-                    prot -= obj.Protein;
-                    break_norm -= obj.Calories;
-                    sum -= obj.Calories;
+                    f.Owner = this;
+                    var res = f.ShowDialog();
+                    if (res == DialogResult.OK)
+                    {
+                        num = f.gram;
+                        dishGram.d = obj;
+                        dishGram.gramm = num;
+                        dg.Add(dishGram);
+                        car += obj.Carbohydrates * (num / 100);
+                        fat += obj.Fats * (num / 100);
+                        prot += obj.Protein * (num / 100);
+                        break_norm += obj.Calories * (num / 100);
+                        sum += obj.Calories * (num / 100);
 
-                    MessageBox.Show("Вы превысили норму!!!");
+                        if (Convert.ToDouble(break_day_kal_lbl.Text) < break_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму углеводов!!!");
+                        }
+
+                        else
+                        {
+                            break_dish_list.Items.Add((Dish)all_dish_list.SelectedItem);
+
+                            typed_carbohydrates_lbl.Text = car.ToString();
+                            typed_fats_lbl.Text = fat.ToString();
+                            typed_proteins_lbl.Text = prot.ToString();
+                            rec_break_kal_lbl.Text = break_norm.ToString();
+                        }
+
+                        earn_day_kal_lbl.Text = sum.ToString();
+                    }
                 }
-
-                else
-                {
-                    break_dish_list.Items.Add((Dish)all_dish_list.SelectedItem);
-
-                    typed_carbohydrates_lbl.Text = car.ToString();
-                    typed_fats_lbl.Text = fat.ToString();
-                    typed_proteins_lbl.Text = prot.ToString();
-                    rec_break_kal_lbl.Text = break_norm.ToString();
-                }
-
-                earn_day_kal_lbl.Text = sum.ToString();
             }
         }
 
@@ -223,11 +224,11 @@ namespace Menu
             if (obj == null) { MessageBox.Show("Выберите блюдо для удаления!"); }
             else
             {
-                car -= obj.Carbohydrates;
-                fat -= obj.Fats;
-                prot -= obj.Protein;
-                break_norm -= obj.Calories;
-                sum -= obj.Calories;
+                car -= obj.Carbohydrates * (num / 100);
+                fat -= obj.Fats * (num / 100);
+                prot -= obj.Protein * (num / 100);
+                break_norm -= obj.Calories * (num / 100);
+                sum -= obj.Calories * (num / 100);
 
                 typed_carbohydrates_lbl.Text = car.ToString();
                 typed_fats_lbl.Text = fat.ToString();
@@ -246,39 +247,52 @@ namespace Menu
         private void add_din_dish_btn_Click(object sender, EventArgs e)
         {
             Dish obj = (Dish)all_dish_list.SelectedItem;
-
             if (obj == null) { MessageBox.Show("Выберите блюдо из списка!"); }
+            else if (obj.MealTime.ToLower() != "обед") { MessageBox.Show("Это блюдо нельзя добавить в обед!"); }
             else
-            {
-                car += obj.Carbohydrates;
-                fat += obj.Fats;
-                prot += obj.Protein;
-                din_norm += obj.Calories;
-                sum += obj.Calories;
-
-                if (Convert.ToDouble(din_day_kal_lbl.Text) < din_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+            { 
+                DishGram dishGram = new DishGram();
+                using (var f = new GramForm(obj))
                 {
-                    car -= obj.Carbohydrates;
-                    fat -= obj.Fats;
-                    prot -= obj.Protein;
-                    din_norm -= obj.Calories;
-                    sum -= obj.Calories;
+                    f.Owner = this;
+                    var res = f.ShowDialog();
+                    if (res == DialogResult.OK)
+                    {
+                        double num = f.gram;
+                        dishGram.d = obj;
+                        dishGram.gramm = num;
+                        dg.Add(dishGram);
+                        car += obj.Carbohydrates * (num / 100);
+                        fat += obj.Fats * (num / 100);
+                        prot += obj.Protein * (num / 100);
+                        din_norm += obj.Calories * (num / 100);
+                        sum += obj.Calories * (num / 100);
 
-                    MessageBox.Show("Вы превысили норму!!!");
+                        if (Convert.ToDouble(din_day_kal_lbl.Text) < din_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму!!!");
+                        }
+
+                        else
+                        {
+                            typed_carbohydrates_lbl.Text = car.ToString();
+                            typed_fats_lbl.Text = fat.ToString();
+                            typed_proteins_lbl.Text = prot.ToString();
+
+                            din_dish_list.Items.Add(all_dish_list.SelectedItem);
+
+                            rec_din_kal_lbl.Text = din_norm.ToString();
+                        }
+
+                        earn_day_kal_lbl.Text = sum.ToString();
+                    }
                 }
-
-                else
-                {
-                    typed_carbohydrates_lbl.Text = car.ToString();
-                    typed_fats_lbl.Text = fat.ToString();
-                    typed_proteins_lbl.Text = prot.ToString();
-
-                    din_dish_list.Items.Add(all_dish_list.SelectedItem);
-
-                    rec_din_kal_lbl.Text = din_norm.ToString();
-                }
-
-                earn_day_kal_lbl.Text = sum.ToString();
             }
         }
 
@@ -289,11 +303,11 @@ namespace Menu
             if (obj == null) { MessageBox.Show("Выберите блюдо для удаления!"); }
             else
             {
-                car -= obj.Carbohydrates;
-                fat -= obj.Fats;
-                prot -= obj.Protein;
-                din_norm -= obj.Calories;
-                sum -= obj.Calories;
+                car -= obj.Carbohydrates * (num / 100);
+                fat -= obj.Fats * (num / 100);
+                prot -= obj.Protein * (num / 100);
+                break_norm -= obj.Calories * (num / 100);
+                sum -= obj.Calories * (num / 100);
 
                 typed_carbohydrates_lbl.Text = car.ToString();
                 typed_fats_lbl.Text = fat.ToString();
@@ -310,39 +324,54 @@ namespace Menu
         private void add_aft_dish_btn_Click(object sender, EventArgs e)
         {
             Dish obj = (Dish)all_dish_list.SelectedItem;
-
             if (obj == null) { MessageBox.Show("Выберите блюдо из списка!"); }
+            else if (obj.MealTime.ToLower() != "полдник") { MessageBox.Show("Это блюдо нельзя добавить в полдник!"); }
             else
             {
-                car += obj.Carbohydrates;
-                fat += obj.Fats;
-                prot += obj.Protein;
-                aft_norm += obj.Calories;
-                sum += obj.Calories;
-
-                if (Convert.ToDouble(aft_day_kal_lbl.Text) < aft_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                DishGram dishGram = new DishGram();
+                using (var f = new GramForm(obj))
                 {
-                    car -= obj.Carbohydrates;
-                    fat -= obj.Fats;
-                    prot -= obj.Protein;
-                    aft_norm -= obj.Calories;
-                    sum -= obj.Calories;
+                    f.Owner = this;
+                    var res = f.ShowDialog();
+                    if (res == DialogResult.OK)
+                    {
+                        double num = f.gram;
+                        dishGram.d = obj;
+                        dishGram.gramm = num;
+                        dg.Add(dishGram);
 
-                    MessageBox.Show("Вы превысили норму!!!");
+                        car += obj.Carbohydrates * (num / 100);
+                        fat += obj.Fats * (num / 100);
+                        prot += obj.Protein * (num / 100);
+                        aft_norm += obj.Calories * (num / 100);
+                        sum += obj.Calories * (num / 100);
+
+                        if (Convert.ToDouble(aft_day_kal_lbl.Text) < aft_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму!!!");
+                        }
+
+                        else
+                        {
+                            typed_carbohydrates_lbl.Text = car.ToString();
+                            typed_fats_lbl.Text = fat.ToString();
+                            typed_proteins_lbl.Text = prot.ToString();
+
+                            aft_dish_list.Items.Add(all_dish_list.SelectedItem);
+
+                            rec_aft_kal_lbl.Text = aft_norm.ToString();
+                        }
+
+                        earn_day_kal_lbl.Text = sum.ToString();
+
+                    }
                 }
-
-                else
-                {
-                    typed_carbohydrates_lbl.Text = car.ToString();
-                    typed_fats_lbl.Text = fat.ToString();
-                    typed_proteins_lbl.Text = prot.ToString();
-
-                    aft_dish_list.Items.Add(all_dish_list.SelectedItem);
-
-                    rec_aft_kal_lbl.Text = aft_norm.ToString();
-                }
-
-                earn_day_kal_lbl.Text = sum.ToString();
             }
         }
 
@@ -353,11 +382,11 @@ namespace Menu
             if (obj == null) { MessageBox.Show("Выберите блюдо для удаления!"); }
             else
             {
-                car -= obj.Carbohydrates;
-                fat -= obj.Fats;
-                prot -= obj.Protein;
-                aft_norm -= obj.Calories;
-                sum -= obj.Calories;
+                car -= obj.Carbohydrates * (num / 100);
+                fat -= obj.Fats * (num / 100);
+                prot -= obj.Protein * (num / 100);
+                break_norm -= obj.Calories * (num / 100);
+                sum -= obj.Calories * (num / 100);
 
                 typed_carbohydrates_lbl.Text = car.ToString();
                 typed_fats_lbl.Text = fat.ToString();
@@ -401,51 +430,79 @@ namespace Menu
 
             cm.Date = menu_date.Value;
 
-            foreach (Dish d in clm)
+            foreach (Class c in cli)
             {
-                cm.IdDish = d.DishId;
-
-                if (first_call_tlstr.Checked || second_call_tlstr.Checked || third_call_tlstr.Checked || four_call_tlstr.Checked)
+                if (first_call_tlstr.Checked)
                 {
-                    foreach (Class c in cli)
+                    if (c.Num < 5)
                     {
-                        if (c.Num == 1 || c.Num == 2 || c.Num == 3 || c.Num == 4)
+                        cm.ClassId = c.ClassId;
+
+                        foreach (var d in clm)
                         {
-                            cm.ClassId = c.ClassId;
-                            cli.Remove(c);
-                            break;
+                            foreach (DishGram item in dg)
+                            {
+                                if (d.DishId == item.d.DishId)
+                                {
+                                    cm.Gramm = item.gramm;
+                                    cm.IdDish = d.DishId;
+                                    break;
+                                }
+                            }
+
+                            DBConnection.Entities.ClassMenus.Add(cm);
+                            DBConnection.Entities.SaveChanges();
                         }
                     }
                 }
 
-                else if (fifth_call_tlstr.Checked || six_call_tlstr.Checked || seventh_call_tlstr.Checked || eighth_call_tlstr.Checked || ninth_call_tlstr.Checked)
+                else if (second_call_tlstr.Checked)
                 {
-                    foreach (Class c in cli)
+                    if (c.Num > 4 && c.Num < 10)
                     {
-                        if (c.Num == 5 || c.Num == 6 || c.Num == 7 || c.Num == 8 || c.Num == 9)
+                        cm.ClassId = c.ClassId;
+
+                        foreach (var d in clm)
                         {
-                            cm.ClassId = c.ClassId;
-                            cli.Remove(c);
-                            break;
+                            foreach (DishGram item in dg)
+                            {
+                                if (d.DishId == item.d.DishId)
+                                {
+                                    cm.Gramm = item.gramm;
+                                    cm.IdDish = d.DishId;
+                                    break;
+                                }
+                            }
+
+                            DBConnection.Entities.ClassMenus.Add(cm);
+                            DBConnection.Entities.SaveChanges();
                         }
                     }
                 }
 
-                else if (tenth_call_tlstr.Checked || eleventh_call_tlstr.Checked)
+                else if (third_call_tlstr.Checked)
                 {
-                    foreach (Class c in cli)
+                    if (c.Num > 9)
                     {
-                        if (c.Num == 10 || c.Num == 11)
+                        cm.ClassId = c.ClassId;
+
+                        foreach (var d in clm)
                         {
-                            cm.ClassId = c.ClassId;
-                            cli.Remove(c);
-                            break;
+                            foreach (DishGram item in dg)
+                            {
+                                if (d.DishId == item.d.DishId)
+                                {
+                                    cm.Gramm = item.gramm;
+                                    cm.IdDish = d.DishId;
+                                    break;
+                                }
+                            }
+
+                            DBConnection.Entities.ClassMenus.Add(cm);
+                            DBConnection.Entities.SaveChanges();
                         }
                     }
                 }
-
-                DBConnection.Entities.ClassMenus.Add(cm);
-                DBConnection.Entities.SaveChanges();
             }
 
             MessageBox.Show("Меню успешно сохранено!");
@@ -458,154 +515,18 @@ namespace Menu
                 first_call_tlstr.Checked = true;
                 second_call_tlstr.Checked = false;
                 third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
             }
             else if (second_call_tlstr.Selected)
             {
                 first_call_tlstr.Checked = false;
                 second_call_tlstr.Checked = true;
                 third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
             }
             else if (third_call_tlstr.Selected)
             {
                 first_call_tlstr.Checked = false;
                 second_call_tlstr.Checked = false;
                 third_call_tlstr.Checked = true;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (four_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = true;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (fifth_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = true;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (six_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = true;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (seventh_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = true;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (eighth_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = true;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (ninth_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = true;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (tenth_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = true;
-                eleventh_call_tlstr.Checked = false;
-            }
-            else if (eleventh_call_tlstr.Selected)
-            {
-                first_call_tlstr.Checked = false;
-                second_call_tlstr.Checked = false;
-                third_call_tlstr.Checked = false;
-                four_call_tlstr.Checked = false;
-                fifth_call_tlstr.Checked = false;
-                six_call_tlstr.Checked = false;
-                seventh_call_tlstr.Checked = false;
-                eighth_call_tlstr.Checked = false;
-                ninth_call_tlstr.Checked = false;
-                tenth_call_tlstr.Checked = false;
-                eleventh_call_tlstr.Checked = true;
             }
         }
 
@@ -613,7 +534,7 @@ namespace Menu
         {
             List<Class> cl = DBConnection.Entities.Classes.ToList();
 
-            if (first_call_tlstr.Selected || second_call_tlstr.Selected || third_call_tlstr.Selected || four_call_tlstr.Selected)
+            if (first_call_tlstr.Selected)
             {
                 foreach (Class c in cl)
                 {
@@ -629,7 +550,7 @@ namespace Menu
                 }
             }
 
-            else if (fifth_call_tlstr.Selected || six_call_tlstr.Selected || seventh_call_tlstr.Selected || eighth_call_tlstr.Selected || ninth_call_tlstr.Selected)
+            else if (second_call_tlstr.Selected)
             {
                 foreach (Class c in cl)
                 {
@@ -645,7 +566,7 @@ namespace Menu
                 }
             }
 
-            else if (tenth_call_tlstr.Selected || eleventh_call_tlstr.Selected)
+            else if (third_call_tlstr.Selected)
             {
                 foreach (Class c in cl)
                 {
@@ -668,8 +589,83 @@ namespace Menu
 
         private void choose_comp_menu_btn_Click(object sender, EventArgs e)
         {
-            ChoiceMenuForm cf = new ChoiceMenuForm();
-            cf.ShowDialog();
+            using (var f = new ChoiceMenuForm())
+            {
+                var res = f.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    break_dish_list.Items.Clear();
+                    din_dish_list.Items.Clear();
+                    aft_dish_list.Items.Clear();
+
+                    if (f.classm == null)
+                        this.Fill();
+                    else
+                    {
+                        ClassMenu cm = f.classm;
+
+                        List<ClassMenu> cl = DBConnection.Entities.ClassMenus.ToList();
+                        List<Dish> d = DBConnection.Entities.Dishes.ToList();
+
+                        foreach (ClassMenu item in cl)
+                        {
+                            if (cm.ClassId == item.ClassId)
+                            {
+                                foreach (Dish val in d)
+                                {
+                                    if (val.DishId == item.IdDish)
+                                    {
+                                        if (val.MealTime.ToLower() == "завтрак")
+                                        {
+                                            break_dish_list.Items.Add(val);
+                                            break_norm += val.Calories * Convert.ToDouble(item.Gramm / 100);
+                                            car += val.Carbohydrates * Convert.ToDouble(item.Gramm / 100);
+                                            fat += val.Fats * Convert.ToDouble(item.Gramm / 100);
+                                            prot += val.Protein * Convert.ToDouble(item.Gramm / 100);
+                                        }
+
+                                        else if (val.MealTime.ToLower() == "обед")
+                                        {
+                                            din_dish_list.Items.Add(val);
+                                            din_norm += val.Calories * Convert.ToDouble(item.Gramm / 100);
+                                            car += val.Carbohydrates * Convert.ToDouble(item.Gramm / 100);
+                                            fat += val.Fats * Convert.ToDouble(item.Gramm / 100);
+                                            prot += val.Protein * Convert.ToDouble(item.Gramm / 100);
+                                        }
+
+                                        else if (val.MealTime.ToLower() == "полдник")
+                                        {
+                                            aft_dish_list.Items.Add(val);
+                                            aft_norm += val.Calories * Convert.ToDouble(item.Gramm / 100);
+                                            car += val.Carbohydrates * Convert.ToDouble(item.Gramm / 100);
+                                            fat += val.Fats * Convert.ToDouble(item.Gramm / 100);
+                                            prot += val.Protein * Convert.ToDouble(item.Gramm / 100);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        rec_aft_kal_lbl.Text = aft_norm.ToString();
+                        rec_break_kal_lbl.Text = break_norm.ToString();
+                        rec_din_kal_lbl.Text = din_norm.ToString();
+                        typed_carbohydrates_lbl.Text = car.ToString();
+                        typed_fats_lbl.Text = fat.ToString();
+                        typed_proteins_lbl.Text = prot.ToString();
+                        earn_day_kal_lbl.Text = Convert.ToString(sum = break_norm + aft_norm + din_norm);
+                    }
+                }
+            }
+
+            this.Fill();
+        }
+
+        private void all_dish_list_DoubleClick(object sender, EventArgs e)
+        {
+            Dish obj = (Dish)all_dish_list.SelectedItem;
+            AddDishForm adf = new AddDishForm(obj);
+
+            adf.ShowDialog();
 
             this.Fill();
         }

@@ -51,8 +51,12 @@
             // choice_class_combox
             // 
             this.choice_class_combox.FormattingEnabled = true;
+            this.choice_class_combox.Items.AddRange(new object[] {
+            "1 - 4 классы",
+            "5 - 9 классы",
+            "10 - 11 классы"});
             this.choice_class_combox.Location = new System.Drawing.Point(51, 14);
-            this.choice_class_combox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.choice_class_combox.Margin = new System.Windows.Forms.Padding(2);
             this.choice_class_combox.Name = "choice_class_combox";
             this.choice_class_combox.Size = new System.Drawing.Size(132, 21);
             this.choice_class_combox.TabIndex = 1;
@@ -61,12 +65,13 @@
             // 
             this.SearchClass_btn.BackColor = System.Drawing.Color.PaleTurquoise;
             this.SearchClass_btn.Location = new System.Drawing.Point(200, 9);
-            this.SearchClass_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchClass_btn.Margin = new System.Windows.Forms.Padding(2);
             this.SearchClass_btn.Name = "SearchClass_btn";
             this.SearchClass_btn.Size = new System.Drawing.Size(99, 27);
             this.SearchClass_btn.TabIndex = 2;
             this.SearchClass_btn.Text = "Найти";
             this.SearchClass_btn.UseVisualStyleBackColor = false;
+            this.SearchClass_btn.Click += new System.EventHandler(this.SearchClass_btn_Click);
             // 
             // menu_lbl
             // 
@@ -82,7 +87,7 @@
             // 
             this.data_menu_list.FormattingEnabled = true;
             this.data_menu_list.Location = new System.Drawing.Point(9, 65);
-            this.data_menu_list.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_menu_list.Margin = new System.Windows.Forms.Padding(2);
             this.data_menu_list.Name = "data_menu_list";
             this.data_menu_list.Size = new System.Drawing.Size(174, 160);
             this.data_menu_list.TabIndex = 4;
@@ -91,33 +96,36 @@
             // 
             this.Choose_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Choose_btn.Location = new System.Drawing.Point(200, 86);
-            this.Choose_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choose_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Choose_btn.Name = "Choose_btn";
             this.Choose_btn.Size = new System.Drawing.Size(99, 27);
             this.Choose_btn.TabIndex = 5;
             this.Choose_btn.Text = "Выбрать";
             this.Choose_btn.UseVisualStyleBackColor = false;
+            this.Choose_btn.Click += new System.EventHandler(this.Choose_btn_Click);
             // 
             // Detail_btn
             // 
             this.Detail_btn.Location = new System.Drawing.Point(200, 132);
-            this.Detail_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Detail_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Detail_btn.Name = "Detail_btn";
             this.Detail_btn.Size = new System.Drawing.Size(99, 27);
             this.Detail_btn.TabIndex = 6;
             this.Detail_btn.Text = "Подробнее";
             this.Detail_btn.UseVisualStyleBackColor = true;
+            this.Detail_btn.Click += new System.EventHandler(this.Detail_btn_Click);
             // 
             // Back_btn
             // 
             this.Back_btn.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.Back_btn.Location = new System.Drawing.Point(200, 183);
-            this.Back_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Back_btn.Name = "Back_btn";
             this.Back_btn.Size = new System.Drawing.Size(99, 27);
             this.Back_btn.TabIndex = 7;
-            this.Back_btn.Text = "Назад";
+            this.Back_btn.Text = "Удалить";
             this.Back_btn.UseVisualStyleBackColor = false;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // ChoiceMenuForm
             // 
@@ -132,7 +140,7 @@
             this.Controls.Add(this.SearchClass_btn);
             this.Controls.Add(this.choice_class_combox);
             this.Controls.Add(this.class_lbl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChoiceMenuForm";
             this.Text = "Готовые меню";
             this.ResumeLayout(false);

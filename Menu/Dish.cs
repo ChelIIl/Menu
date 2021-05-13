@@ -27,7 +27,6 @@ namespace Menu
         public double Carbohydrates { get; set; }
         public double Calories { get; set; }
         public double Weight { get; set; }
-        public string Descr { get; set; }
         public string MealTime { get; set; }
         public Nullable<double> Ca { get; set; }
         public Nullable<double> P { get; set; }
@@ -43,7 +42,7 @@ namespace Menu
 
         public override string ToString()
         {
-            return DishName + "--" + Calories;
+            return DishName + "--" + Calories + " ккал";
         }
     }
 }
