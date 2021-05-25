@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -8,6 +9,8 @@ namespace Menu
 {
     public partial class MainForm : Form
     {
+        private DataTable tbl;
+        private DataSet dataSet;
         List<DishGram> dg = new List<DishGram>();
         double break_norm = 0;
         double din_norm = 0;
@@ -606,6 +609,7 @@ namespace Menu
 
                         List<ClassMenu> cl = DBConnection.Entities.ClassMenus.ToList();
                         List<Dish> d = DBConnection.Entities.Dishes.ToList();
+                        menu_date.Value = cm.Date;
 
                         foreach (ClassMenu item in cl)
                         {
@@ -668,6 +672,267 @@ namespace Menu
             adf.ShowDialog();
 
             this.Fill();
+        }
+
+        private void excel_btn_Click(object sender, EventArgs e)
+        {
+            List<Dish> li = new List<Dish>();
+            GetAllDish(li);
+            CreateDataTable(li);
+
+            var excelApp = new Excel.Application();
+            excelApp.Workbooks.Add();
+            Excel._Worksheet workSheet = excelApp.ActiveSheet;
+
+            for (var i = 0; i < tbl.Columns.Count; i++)
+            {
+                workSheet.Cells[1, i + 1] = tbl.Columns[i].ColumnName;
+            }
+
+            for (var i = 0; i < tbl.Rows.Count; i++)
+            {
+                // to do: format datetime values before printing
+                for (var j = 0; j < tbl.Columns.Count; j++)
+                {
+                    workSheet.Cells[i + 2, j + 1] = tbl.Rows[i][j];
+                }
+            }
+
+            excelApp.Visible = true;
+        }
+
+        private void GetAllDish(List<Dish> li)
+        {
+            foreach(Dish dish in break_dish_list.Items)
+            {
+                li.Add(dish);
+            }
+
+            foreach (Dish dish in din_dish_list.Items)
+            {
+                li.Add(dish);
+            }
+
+            foreach (Dish dish in aft_dish_list.Items)
+            {
+                li.Add(dish);
+            }
+        }
+
+        private void CreateDataTable(List<Dish> li)
+        {
+
+            tbl = new DataTable("DishTable");
+            DataColumn column;
+            DataRow row;
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.String");
+            column.ColumnName = "Прием пищи,\n наименование блюда";
+            column.Caption = "DishName";
+            column.ReadOnly = true;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.Double");
+            column.ColumnName = "Белки";
+            column.AutoIncrement = false;
+            column.Caption = "Protein";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.Double");
+            column.ColumnName = "Жиры";
+            column.AutoIncrement = false;
+            column.Caption = "Fats";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "Углеводы";
+            column.AutoIncrement = false;
+            column.Caption = "Carbohydrates";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "Калории";
+            column.AutoIncrement = false;
+            column.Caption = "Calories";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "Масса блюда";
+            column.AutoIncrement = false;
+            column.Caption = "Weight";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "Ca";
+            column.AutoIncrement = false;
+            column.Caption = "Ca";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "P";
+            column.AutoIncrement = false;
+            column.Caption = "P";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "Mg";
+            column.AutoIncrement = false;
+            column.Caption = "Mg";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "Fe";
+            column.AutoIncrement = false;
+            column.Caption = "Fe";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "B1";
+            column.AutoIncrement = false;
+            column.Caption = "B1";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "C";
+            column.AutoIncrement = false;
+            column.Caption = "C";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "A";
+            column.AutoIncrement = false;
+            column.Caption = "A";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = Type.GetType("System.Double");
+            column.ColumnName = "E";
+            column.AutoIncrement = false;
+            column.Caption = "E";
+            column.ReadOnly = false;
+            column.Unique = false;
+            tbl.Columns.Add(column);
+
+            dataSet = new DataSet();
+            dataSet.Tables.Add(tbl);
+
+
+            row = tbl.NewRow();
+            string txt = "ЗАВТРАК";
+            row["Прием пищи,\n наименование блюда"] = txt;
+            tbl.Rows.Add(row);
+            foreach (var dish in li)
+            {
+                if (dish.MealTime == "Завтрак")
+                {
+                    row = tbl.NewRow();
+                    row["Прием пищи,\n наименование блюда"] = dish.DishName;
+                    row["Белки"] = dish.Protein;
+                    row["Жиры"] = dish.Fats;
+                    row["Углеводы"] = dish.Carbohydrates;
+                    row["Калории"] = dish.Calories;
+                    row["Масса блюда"] = dish.Weight;
+                    row["Ca"] = dish.Ca;
+                    row["P"] = dish.P;
+                    row["Mg"] = dish.Mg;
+                    row["Fe"] = dish.Fe;
+                    row["B1"] = dish.B1;
+                    row["C"] = dish.C;
+                    row["A"] = dish.A;
+                    row["E"] = dish.E;
+                    tbl.Rows.Add(row);
+                }
+            }
+
+            row = tbl.NewRow();
+            row["Прием пищи,\n наименование блюда"] = "ОБЕД";
+            tbl.Rows.Add(row);
+            foreach (var dish in li)
+            {
+                if (dish.MealTime == "Обед")
+                {
+                    row = tbl.NewRow();
+                    row["Прием пищи,\n наименование блюда"] = dish.DishName;
+                    row["Белки"] = dish.Protein;
+                    row["Жиры"] = dish.Fats;
+                    row["Углеводы"] = dish.Carbohydrates;
+                    row["Калории"] = dish.Calories;
+                    row["Масса блюда"] = dish.Weight;
+                    row["Ca"] = dish.Ca;
+                    row["P"] = dish.P;
+                    row["Mg"] = dish.Mg;
+                    row["Fe"] = dish.Fe;
+                    row["B1"] = dish.B1;
+                    row["C"] = dish.C;
+                    row["A"] = dish.A;
+                    row["E"] = dish.E;
+                    tbl.Rows.Add(row);
+                }
+            }
+
+            row = tbl.NewRow();
+            row["Прием пищи,\n наименование блюда"] = "ПОЛДНИК";
+            tbl.Rows.Add(row);
+            foreach (var dish in li)
+            {
+                if (dish.MealTime == "Полдник")
+                {
+                    row = tbl.NewRow();
+                    row["Прием пищи,\n наименование блюда"] = dish.DishName;
+                    row["Белки"] = dish.Protein;
+                    row["Жиры"] = dish.Fats;
+                    row["Углеводы"] = dish.Carbohydrates;
+                    row["Калории"] = dish.Calories;
+                    row["Масса блюда"] = dish.Weight;
+                    row["Ca"] = dish.Ca;
+                    row["P"] = dish.P;
+                    row["Mg"] = dish.Mg;
+                    row["Fe"] = dish.Fe;
+                    row["B1"] = dish.B1;
+                    row["C"] = dish.C;
+                    row["A"] = dish.A;
+                    row["E"] = dish.E;
+                    tbl.Rows.Add(row);
+                }
+            }
         }
     }
 }
