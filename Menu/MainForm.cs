@@ -206,7 +206,7 @@ namespace Menu
 
                         else
                         {
-                            break_dish_list.Items.Add((Dish)all_dish_list.SelectedItem);
+                            break_dish_list.Items.Add(dishGram);
 
                             typed_carbohydrates_lbl.Text = car.ToString();
                             typed_fats_lbl.Text = fat.ToString();
@@ -222,16 +222,16 @@ namespace Menu
 
         private void del_break_dish_btn_Click(object sender, EventArgs e)
         {
-            Dish obj = (Dish)break_dish_list.SelectedItem;
+            DishGram obj = (DishGram)break_dish_list.SelectedItem;
 
             if (obj == null) { MessageBox.Show("Выберите блюдо для удаления!"); }
             else
             {
-                car -= obj.Carbohydrates * (num / 100);
-                fat -= obj.Fats * (num / 100);
-                prot -= obj.Protein * (num / 100);
-                break_norm -= obj.Calories * (num / 100);
-                sum -= obj.Calories * (num / 100);
+                car -= obj.d.Carbohydrates * (obj.gramm / 100);
+                fat -= obj.d.Fats * (obj.gramm / 100);
+                prot -= obj.d.Protein * (obj.gramm / 100);
+                break_norm -= obj.d.Calories * (obj.gramm / 100);
+                sum -= obj.d.Calories * (obj.gramm / 100);
 
                 typed_carbohydrates_lbl.Text = car.ToString();
                 typed_fats_lbl.Text = fat.ToString();
@@ -288,7 +288,7 @@ namespace Menu
                             typed_fats_lbl.Text = fat.ToString();
                             typed_proteins_lbl.Text = prot.ToString();
 
-                            din_dish_list.Items.Add(all_dish_list.SelectedItem);
+                            din_dish_list.Items.Add(dishGram);
 
                             rec_din_kal_lbl.Text = din_norm.ToString();
                         }
@@ -301,16 +301,16 @@ namespace Menu
 
         private void del_din_dish_btn_Click(object sender, EventArgs e)
         {
-            Dish obj = (Dish)din_dish_list.SelectedItem;
+            DishGram obj = (DishGram)din_dish_list.SelectedItem;
 
             if (obj == null) { MessageBox.Show("Выберите блюдо для удаления!"); }
             else
             {
-                car -= obj.Carbohydrates * (num / 100);
-                fat -= obj.Fats * (num / 100);
-                prot -= obj.Protein * (num / 100);
-                break_norm -= obj.Calories * (num / 100);
-                sum -= obj.Calories * (num / 100);
+                car -= obj.d.Carbohydrates * (obj.gramm / 100);
+                fat -= obj.d.Fats * (obj.gramm / 100);
+                prot -= obj.d.Protein * (obj.gramm / 100);
+                din_norm -= obj.d.Calories * (obj.gramm / 100);
+                sum -= obj.d.Calories * (obj.gramm / 100);
 
                 typed_carbohydrates_lbl.Text = car.ToString();
                 typed_fats_lbl.Text = fat.ToString();
@@ -366,7 +366,7 @@ namespace Menu
                             typed_fats_lbl.Text = fat.ToString();
                             typed_proteins_lbl.Text = prot.ToString();
 
-                            aft_dish_list.Items.Add(all_dish_list.SelectedItem);
+                            aft_dish_list.Items.Add(dishGram);
 
                             rec_aft_kal_lbl.Text = aft_norm.ToString();
                         }
@@ -380,16 +380,16 @@ namespace Menu
 
         private void del_aft_dish_btn_Click(object sender, EventArgs e)
         {
-            Dish obj = (Dish)aft_dish_list.SelectedItem;
+            DishGram obj = (DishGram)aft_dish_list.SelectedItem;
 
             if (obj == null) { MessageBox.Show("Выберите блюдо для удаления!"); }
             else
             {
-                car -= obj.Carbohydrates * (num / 100);
-                fat -= obj.Fats * (num / 100);
-                prot -= obj.Protein * (num / 100);
-                break_norm -= obj.Calories * (num / 100);
-                sum -= obj.Calories * (num / 100);
+                car -= obj.d.Carbohydrates * (obj.gramm / 100);
+                fat -= obj.d.Fats * (obj.gramm / 100);
+                prot -= obj.d.Protein * (obj.gramm / 100);
+                aft_norm -= obj.d.Calories * (obj.gramm / 100);
+                sum -= obj.d.Calories * (obj.gramm / 100);
 
                 typed_carbohydrates_lbl.Text = car.ToString();
                 typed_fats_lbl.Text = fat.ToString();
@@ -414,19 +414,19 @@ namespace Menu
         {
             ClassMenu cm = new ClassMenu();
             List<Class> cli = DBConnection.Entities.Classes.ToList();
-            List<Dish> clm = new List<Dish>();
+            List<DishGram> clm = new List<DishGram>();
 
-            foreach (Dish d in break_dish_list.Items)
+            foreach (DishGram d in break_dish_list.Items)
             {
                 clm.Add(d);
             }
 
-            foreach (Dish d in din_dish_list.Items)
+            foreach (DishGram d in din_dish_list.Items)
             {
                 clm.Add(d);
             }
 
-            foreach (Dish d in aft_dish_list.Items)
+            foreach (DishGram d in aft_dish_list.Items)
             {
                 clm.Add(d);
             }
@@ -445,10 +445,10 @@ namespace Menu
                         {
                             foreach (DishGram item in dg)
                             {
-                                if (d.DishId == item.d.DishId)
+                                if (d.d.DishId == item.d.DishId)
                                 {
                                     cm.Gramm = item.gramm;
-                                    cm.IdDish = d.DishId;
+                                    cm.IdDish = d.d.DishId;
                                     break;
                                 }
                             }
@@ -469,10 +469,10 @@ namespace Menu
                         {
                             foreach (DishGram item in dg)
                             {
-                                if (d.DishId == item.d.DishId)
+                                if (d.d.DishId == item.d.DishId)
                                 {
                                     cm.Gramm = item.gramm;
-                                    cm.IdDish = d.DishId;
+                                    cm.IdDish = d.d.DishId;
                                     break;
                                 }
                             }
@@ -493,10 +493,10 @@ namespace Menu
                         {
                             foreach (DishGram item in dg)
                             {
-                                if (d.DishId == item.d.DishId)
+                                if (d.d.DishId == item.d.DishId)
                                 {
                                     cm.Gramm = item.gramm;
-                                    cm.IdDish = d.DishId;
+                                    cm.IdDish = d.d.DishId;
                                     break;
                                 }
                             }
@@ -610,6 +610,7 @@ namespace Menu
                         List<ClassMenu> cl = DBConnection.Entities.ClassMenus.ToList();
                         List<Dish> d = DBConnection.Entities.Dishes.ToList();
                         menu_date.Value = cm.Date;
+                        
 
                         foreach (ClassMenu item in cl)
                         {
@@ -619,9 +620,13 @@ namespace Menu
                                 {
                                     if (val.DishId == item.IdDish)
                                     {
+                                        DishGram dg = new DishGram();
+
                                         if (val.MealTime.ToLower() == "завтрак")
                                         {
-                                            break_dish_list.Items.Add(val);
+                                            dg.d = val;
+                                            dg.gramm = item.Gramm;
+                                            break_dish_list.Items.Add(dg);
                                             break_norm += val.Calories * Convert.ToDouble(item.Gramm / 100);
                                             car += val.Carbohydrates * Convert.ToDouble(item.Gramm / 100);
                                             fat += val.Fats * Convert.ToDouble(item.Gramm / 100);
@@ -630,7 +635,9 @@ namespace Menu
 
                                         else if (val.MealTime.ToLower() == "обед")
                                         {
-                                            din_dish_list.Items.Add(val);
+                                            dg.d = val;
+                                            dg.gramm = item.Gramm;
+                                            din_dish_list.Items.Add(dg);
                                             din_norm += val.Calories * Convert.ToDouble(item.Gramm / 100);
                                             car += val.Carbohydrates * Convert.ToDouble(item.Gramm / 100);
                                             fat += val.Fats * Convert.ToDouble(item.Gramm / 100);
@@ -639,7 +646,9 @@ namespace Menu
 
                                         else if (val.MealTime.ToLower() == "полдник")
                                         {
-                                            aft_dish_list.Items.Add(val);
+                                            dg.d = val;
+                                            dg.gramm = item.Gramm;
+                                            aft_dish_list.Items.Add(dg);
                                             aft_norm += val.Calories * Convert.ToDouble(item.Gramm / 100);
                                             car += val.Carbohydrates * Convert.ToDouble(item.Gramm / 100);
                                             fat += val.Fats * Convert.ToDouble(item.Gramm / 100);
@@ -676,7 +685,7 @@ namespace Menu
 
         private void excel_btn_Click(object sender, EventArgs e)
         {
-            List<Dish> li = new List<Dish>();
+            List<DishGram> li = new List<DishGram>();
             GetAllDish(li);
             CreateDataTable(li);
 
@@ -691,7 +700,6 @@ namespace Menu
 
             for (var i = 0; i < tbl.Rows.Count; i++)
             {
-                // to do: format datetime values before printing
                 for (var j = 0; j < tbl.Columns.Count; j++)
                 {
                     workSheet.Cells[i + 2, j + 1] = tbl.Rows[i][j];
@@ -701,25 +709,25 @@ namespace Menu
             excelApp.Visible = true;
         }
 
-        private void GetAllDish(List<Dish> li)
+        private void GetAllDish(List<DishGram> li)
         {
-            foreach(Dish dish in break_dish_list.Items)
+            foreach(DishGram dish in break_dish_list.Items)
             {
                 li.Add(dish);
             }
 
-            foreach (Dish dish in din_dish_list.Items)
+            foreach (DishGram dish in din_dish_list.Items)
             {
                 li.Add(dish);
             }
 
-            foreach (Dish dish in aft_dish_list.Items)
+            foreach (DishGram dish in aft_dish_list.Items)
             {
                 li.Add(dish);
             }
         }
 
-        private void CreateDataTable(List<Dish> li)
+        private void CreateDataTable(List<DishGram> li)
         {
 
             tbl = new DataTable("DishTable");
@@ -861,23 +869,23 @@ namespace Menu
             tbl.Rows.Add(row);
             foreach (var dish in li)
             {
-                if (dish.MealTime == "Завтрак")
+                if (dish.d.MealTime == "Завтрак")
                 {
                     row = tbl.NewRow();
-                    row["Прием пищи,\n наименование блюда"] = dish.DishName;
-                    row["Белки"] = dish.Protein;
-                    row["Жиры"] = dish.Fats;
-                    row["Углеводы"] = dish.Carbohydrates;
-                    row["Калории"] = dish.Calories;
-                    row["Масса блюда"] = dish.Weight;
-                    row["Ca"] = dish.Ca;
-                    row["P"] = dish.P;
-                    row["Mg"] = dish.Mg;
-                    row["Fe"] = dish.Fe;
-                    row["B1"] = dish.B1;
-                    row["C"] = dish.C;
-                    row["A"] = dish.A;
-                    row["E"] = dish.E;
+                    row["Прием пищи,\n наименование блюда"] = dish.d.DishName;
+                    row["Белки"] = dish.d.Protein * (dish.gramm / 100);
+                    row["Жиры"] = dish.d.Fats * (dish.gramm / 100);
+                    row["Углеводы"] = dish.d.Carbohydrates * (dish.gramm / 100);
+                    row["Калории"] = dish.d.Calories * (dish.gramm / 100);
+                    row["Масса блюда"] = dish.d.Weight * (dish.gramm / 100);
+                    row["Ca"] = dish.d.Ca * (dish.gramm / 100);
+                    row["P"] = dish.d.P * (dish.gramm / 100);
+                    row["Mg"] = dish.d.Mg * (dish.gramm / 100);
+                    row["Fe"] = dish.d.Fe * (dish.gramm / 100);
+                    row["B1"] = dish.d.B1 * (dish.gramm / 100);
+                    row["C"] = dish.d.C * (dish.gramm / 100);
+                    row["A"] = dish.d.A * (dish.gramm / 100);
+                    row["E"] = dish.d.E * (dish.gramm / 100);
                     tbl.Rows.Add(row);
                 }
             }
@@ -887,23 +895,23 @@ namespace Menu
             tbl.Rows.Add(row);
             foreach (var dish in li)
             {
-                if (dish.MealTime == "Обед")
+                if (dish.d.MealTime == "Обед")
                 {
                     row = tbl.NewRow();
-                    row["Прием пищи,\n наименование блюда"] = dish.DishName;
-                    row["Белки"] = dish.Protein;
-                    row["Жиры"] = dish.Fats;
-                    row["Углеводы"] = dish.Carbohydrates;
-                    row["Калории"] = dish.Calories;
-                    row["Масса блюда"] = dish.Weight;
-                    row["Ca"] = dish.Ca;
-                    row["P"] = dish.P;
-                    row["Mg"] = dish.Mg;
-                    row["Fe"] = dish.Fe;
-                    row["B1"] = dish.B1;
-                    row["C"] = dish.C;
-                    row["A"] = dish.A;
-                    row["E"] = dish.E;
+                    row["Прием пищи,\n наименование блюда"] = dish.d.DishName;
+                    row["Белки"] = dish.d.Protein * (dish.gramm / 100);
+                    row["Жиры"] = dish.d.Fats * (dish.gramm / 100);
+                    row["Углеводы"] = dish.d.Carbohydrates * (dish.gramm / 100);
+                    row["Калории"] = dish.d.Calories * (dish.gramm / 100);
+                    row["Масса блюда"] = dish.d.Weight * (dish.gramm / 100);
+                    row["Ca"] = dish.d.Ca * (dish.gramm / 100);
+                    row["P"] = dish.d.P * (dish.gramm / 100);
+                    row["Mg"] = dish.d.Mg * (dish.gramm / 100);
+                    row["Fe"] = dish.d.Fe * (dish.gramm / 100);
+                    row["B1"] = dish.d.B1 * (dish.gramm / 100);
+                    row["C"] = dish.d.C * (dish.gramm / 100);
+                    row["A"] = dish.d.A * (dish.gramm / 100);
+                    row["E"] = dish.d.E * (dish.gramm / 100);
                     tbl.Rows.Add(row);
                 }
             }
@@ -913,26 +921,44 @@ namespace Menu
             tbl.Rows.Add(row);
             foreach (var dish in li)
             {
-                if (dish.MealTime == "Полдник")
+                if (dish.d.MealTime == "Полдник")
                 {
                     row = tbl.NewRow();
-                    row["Прием пищи,\n наименование блюда"] = dish.DishName;
-                    row["Белки"] = dish.Protein;
-                    row["Жиры"] = dish.Fats;
-                    row["Углеводы"] = dish.Carbohydrates;
-                    row["Калории"] = dish.Calories;
-                    row["Масса блюда"] = dish.Weight;
-                    row["Ca"] = dish.Ca;
-                    row["P"] = dish.P;
-                    row["Mg"] = dish.Mg;
-                    row["Fe"] = dish.Fe;
-                    row["B1"] = dish.B1;
-                    row["C"] = dish.C;
-                    row["A"] = dish.A;
-                    row["E"] = dish.E;
+                    row["Прием пищи,\n наименование блюда"] = dish.d.DishName;
+                    row["Белки"] = dish.d.Protein * (dish.gramm / 100);
+                    row["Жиры"] = dish.d.Fats * (dish.gramm / 100);
+                    row["Углеводы"] = dish.d.Carbohydrates * (dish.gramm / 100);
+                    row["Калории"] = dish.d.Calories * (dish.gramm / 100);
+                    row["Масса блюда"] = dish.d.Weight * (dish.gramm / 100);
+                    row["Ca"] = dish.d.Ca * (dish.gramm / 100);
+                    row["P"] = dish.d.P * (dish.gramm / 100);
+                    row["Mg"] = dish.d.Mg * (dish.gramm / 100);
+                    row["Fe"] = dish.d.Fe * (dish.gramm / 100);
+                    row["B1"] = dish.d.B1 * (dish.gramm / 100);
+                    row["C"] = dish.d.C * (dish.gramm / 100);
+                    row["A"] = dish.d.A * (dish.gramm / 100);
+                    row["E"] = dish.d.E * (dish.gramm / 100);
                     tbl.Rows.Add(row);
                 }
             }
+            row = tbl.NewRow();
+            row["Прием пищи,\n наименование блюда"] = menu_date.Value.ToString("d");
+            tbl.Rows.Add(row);
+
+            row = tbl.NewRow();
+            if (first_call_tlstr.Checked)
+            {
+                row["Прием пищи,\n наименование блюда"] = first_call_tlstr.Text;
+            }
+            else if (second_call_tlstr.Checked)
+            {
+                row["Прием пищи,\n наименование блюда"] = second_call_tlstr.Text;
+            }
+            else if (third_call_tlstr.Checked)
+            {
+                row["Прием пищи,\n наименование блюда"] = third_call_tlstr.Text;
+            }
+            tbl.Rows.Add(row);
         }
     }
 }

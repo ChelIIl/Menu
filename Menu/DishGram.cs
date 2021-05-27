@@ -10,5 +10,10 @@ namespace Menu
     {
         public Dish d;
         public double gramm;
+
+        public override string ToString()
+        {
+            return d.DishName + "--" + d.Calories;
+        }
     }
 }

@@ -8,6 +8,6 @@ namespace Menu
 {
     class DBConnection
     {
-        public static MenuEntities Entities { get; } = new MenuEntities();
+        public static MenuEntities1 Entities { get; } = new MenuEntities1();
     }
 }

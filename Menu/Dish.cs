@@ -42,7 +42,7 @@ namespace Menu
 
         public override string ToString()
         {
-            return DishName + "--" + Calories + " ккал";
+            return this.DishName + "--" + this.Calories;
         }
     }
 }

@@ -23,7 +23,6 @@ namespace Menu
         public int ClassId { get; set; }
         public int NormId { get; set; }
         public int Num { get; set; }
-        public string Letter { get; set; }
     
         public virtual Norm Norm { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

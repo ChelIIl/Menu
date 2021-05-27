@@ -4,15 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="27d3cc5046c7405b947147f717a2e71d" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Class" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.ClassMenu" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Dish" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Norm" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="Model.FK__Class__Letter__4BAC3F29" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__ClassMenu__Date__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__ClassMenu__IdDis__5165187F" ManuallyRouted="false" />
+      <Diagram DiagramId="f208cfe18cb04b1580271a9cca7e6b56" Name="Diagram1">
+        <EntityTypeShape EntityType="TestModel.Class" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.ClassMenu" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Dish" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Norm" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="TestModel.FK__Class__Num__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK__ClassMenu__Date__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK__ClassMenu__IdDis__3E52440B" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

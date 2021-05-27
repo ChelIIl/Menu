@@ -25,6 +25,9 @@ namespace Menu
         public double NormCarbohydrates { get; set; }
         public double NormFats { get; set; }
         public double NormProteins { get; set; }
+        public double Break { get; set; }
+        public double Din { get; set; }
+        public double Aft { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Class> Classes { get; set; }
