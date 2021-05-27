@@ -35,7 +35,7 @@
             this.data_menu_list = new System.Windows.Forms.ListBox();
             this.Choose_btn = new System.Windows.Forms.Button();
             this.Detail_btn = new System.Windows.Forms.Button();
-            this.Back_btn = new System.Windows.Forms.Button();
+            this.del_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // class_lbl
@@ -115,24 +115,24 @@
             this.Detail_btn.UseVisualStyleBackColor = true;
             this.Detail_btn.Click += new System.EventHandler(this.Detail_btn_Click);
             // 
-            // Back_btn
+            // del_btn
             // 
-            this.Back_btn.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Back_btn.Location = new System.Drawing.Point(200, 183);
-            this.Back_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(99, 27);
-            this.Back_btn.TabIndex = 7;
-            this.Back_btn.Text = "Удалить";
-            this.Back_btn.UseVisualStyleBackColor = false;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            this.del_btn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.del_btn.Location = new System.Drawing.Point(200, 183);
+            this.del_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.del_btn.Name = "del_btn";
+            this.del_btn.Size = new System.Drawing.Size(99, 27);
+            this.del_btn.TabIndex = 7;
+            this.del_btn.Text = "Удалить";
+            this.del_btn.UseVisualStyleBackColor = false;
+            this.del_btn.Click += new System.EventHandler(this.del_btn_Click);
             // 
             // ChoiceMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 240);
-            this.Controls.Add(this.Back_btn);
+            this.Controls.Add(this.del_btn);
             this.Controls.Add(this.Detail_btn);
             this.Controls.Add(this.Choose_btn);
             this.Controls.Add(this.data_menu_list);
@@ -157,6 +157,6 @@
         private System.Windows.Forms.ListBox data_menu_list;
         private System.Windows.Forms.Button Choose_btn;
         private System.Windows.Forms.Button Detail_btn;
-        private System.Windows.Forms.Button Back_btn;
+        private System.Windows.Forms.Button del_btn;
     }
 }

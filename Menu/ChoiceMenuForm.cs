@@ -91,17 +91,60 @@ namespace Menu
             this.Fill(li);
         }
 
-        private void Back_btn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Меню успешно удалено!");
-            this.Close();
-        }
-
         private void Choose_btn_Click(object sender, EventArgs e)
         {
             this.classm = (ClassMenu)data_menu_list.SelectedItem;
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void del_btn_Click(object sender, EventArgs e)
+        {
+            ClassMenu cm = (ClassMenu)data_menu_list.SelectedItem;
+            List<ClassMenu> cmlist = DBConnection.Entities.ClassMenus.ToList();
+            if (cm == null)
+                MessageBox.Show("Выберите меню для удаления!");
+            else
+            {
+                if (cm.Class.Num < 5)
+                {
+                    foreach (var item in cmlist)
+                    {
+                        if (item.Class.Num < 5)
+                        {
+                            DBConnection.Entities.ClassMenus.Remove(item);
+                            DBConnection.Entities.SaveChanges();
+                        }
+                    }
+                }
+
+                if (cm.Class.Num < 10 && cm.Class.Num > 4)
+                {
+                    foreach (var item in cmlist)
+                    {
+                        if (item.Class.Num < 10 && item.Class.Num > 4)
+                        {
+                            DBConnection.Entities.ClassMenus.Remove(item);
+                            DBConnection.Entities.SaveChanges();
+                        }
+                    }
+                }
+
+                if (cm.Class.Num > 9)
+                {
+                    foreach (var item in cmlist)
+                    {
+                        if (item.Class.Num > 9)
+                        {
+                            DBConnection.Entities.ClassMenus.Remove(item);
+                            DBConnection.Entities.SaveChanges();
+                        }
+                    }
+                }
+
+                MessageBox.Show("Меню удалено!");
+                this.Fill();
+            }
         }
     }
 }

@@ -193,7 +193,18 @@ namespace Menu
                         break_norm += obj.Calories * (num / 100);
                         sum += obj.Calories * (num / 100);
 
-                        if (Convert.ToDouble(break_day_kal_lbl.Text) < break_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        if (Convert.ToDouble(break_day_kal_lbl.Text) < break_norm)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму калорий!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_carbohydrates_lbl.Text) < car)
                         {
                             car -= obj.Carbohydrates * (num / 100);
                             fat -= obj.Fats * (num / 100);
@@ -202,6 +213,28 @@ namespace Menu
                             sum -= obj.Calories * (num / 100);
 
                             MessageBox.Show("Вы превысили норму углеводов!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_fats_lbl.Text) < fat)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму жиров!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму белков!!!");
                         }
 
                         else
@@ -271,7 +304,7 @@ namespace Menu
                         din_norm += obj.Calories * (num / 100);
                         sum += obj.Calories * (num / 100);
 
-                        if (Convert.ToDouble(din_day_kal_lbl.Text) < din_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        if (Convert.ToDouble(din_day_kal_lbl.Text) < din_norm)
                         {
                             car -= obj.Carbohydrates * (num / 100);
                             fat -= obj.Fats * (num / 100);
@@ -279,7 +312,40 @@ namespace Menu
                             break_norm -= obj.Calories * (num / 100);
                             sum -= obj.Calories * (num / 100);
 
-                            MessageBox.Show("Вы превысили норму!!!");
+                            MessageBox.Show("Вы превысили калорий!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_carbohydrates_lbl.Text) < car)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму углеводов!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_fats_lbl.Text) < fat)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму жиров!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму белков!!!");
                         }
 
                         else
@@ -349,7 +415,7 @@ namespace Menu
                         aft_norm += obj.Calories * (num / 100);
                         sum += obj.Calories * (num / 100);
 
-                        if (Convert.ToDouble(aft_day_kal_lbl.Text) < aft_norm || Convert.ToDouble(norm_carbohydrates_lbl.Text) < car || Convert.ToDouble(norm_fats_lbl.Text) < fat || Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        if (Convert.ToDouble(aft_day_kal_lbl.Text) < aft_norm)
                         {
                             car -= obj.Carbohydrates * (num / 100);
                             fat -= obj.Fats * (num / 100);
@@ -357,7 +423,40 @@ namespace Menu
                             break_norm -= obj.Calories * (num / 100);
                             sum -= obj.Calories * (num / 100);
 
-                            MessageBox.Show("Вы превысили норму!!!");
+                            MessageBox.Show("Вы превысили калорий!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_carbohydrates_lbl.Text) < car)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму углеводов!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_fats_lbl.Text) < fat)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму жиров!!!");
+                        }
+
+                        else if (Convert.ToDouble(norm_proteins_lbl.Text) < prot)
+                        {
+                            car -= obj.Carbohydrates * (num / 100);
+                            fat -= obj.Fats * (num / 100);
+                            prot -= obj.Protein * (num / 100);
+                            break_norm -= obj.Calories * (num / 100);
+                            sum -= obj.Calories * (num / 100);
+
+                            MessageBox.Show("Вы превысили норму белков!!!");
                         }
 
                         else
